@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+
+    <appender name="Console"
+        class="ch.qos.logback.core.ConsoleAppender">
+        <layout class="ch.qos.logback.classic.PatternLayout">
+            <Pattern>
+                %d{ISO8601}, %p, %m, [%t] {%c}%n
+            </Pattern>
+        </layout>
+    </appender>
+
+    <logger name="com.example.demo" level="${LOG_LEVEL:-info}" additivity="false">
+        <appender-ref ref="Console" />
+    </logger>
+
+    <root level="${ROOT_LOG_LEVEL:-info}">
+        <appender-ref ref="Console" />
+    </root>
+
+</configuration>

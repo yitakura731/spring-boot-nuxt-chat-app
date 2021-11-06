@@ -1,0 +1,14 @@
+.env
+Frontend/.nuxt
+Frontend/node_modules
+Frontend/dist
+Frontend/.VSCodeCounter
+Backend/.gradle
+Backend/.settings
+Backend/bin
+Backend/storage
+Backend/.project
+Backend/.classpath
+.metadata/
+.recommenders/
+RemoteSystemsTempFiles

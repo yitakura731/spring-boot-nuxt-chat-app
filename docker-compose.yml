@@ -1,0 +1,56 @@
+version: "3.4"
+
+services:
+
+  Demo2Database:
+    image: demo2/demo2-db:1.0.0
+    container_name: demo2-db
+    build:
+      context: ./Database/
+      dockerfile: Dockerfile
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=admin
+      - POSTGRES_DB=demo2
+      - POSTGRES_INITDB_ARGS=--encoding=UTF-8 --locale=C
+    volumes:
+      - /demo2/db/data:/var/lib/postgresql/data
+      - /demo2/db/logs:/var/log
+    ports:
+      - 15432:5432
+
+  Demo2Backend: 
+    image: demo2/demo2-backend:1.0.0
+    container_name: demo2-backend
+    build:
+      context: ./Backend/
+      dockerfile: Dockerfile
+    environment:
+      - COOKIE_DOMAIN=mypc.local
+      - COOKIE_SECURE=false
+      - CORS_ALLOW_ORIGIN=http://mypc.local:81
+      - JDBC_DRIVER_CLASS_NAME=org.postgresql.Driver
+      - JDBC_PASSWORD=admin
+      - JDBC_URL=jdbc:postgresql://demo2-db:5432/demo2
+      - JDBC_USER=postgres
+    ports:
+      - "8081:8080"
+    depends_on:
+      - "Demo2Database"
+        
+  Demo2Frontend:
+    image: demo2/demo2-frontend:1.0.0
+    container_name: demo2-frontend
+    build:
+      context: ./Frontend/
+      dockerfile: Dockerfile
+      args:
+        - REPOSITORY_URL=http://demo2-backend:8080
+        - PUBLIC_DOMAIN=mypc.local:81
+    environment:
+      - REPOSITORY_URL=http://demo2-backend:8080
+      - PUBLIC_DOMAIN=mypc.local:81
+    ports:
+      - "81:81"
+    depends_on:
+      - "Demo2Backend"
