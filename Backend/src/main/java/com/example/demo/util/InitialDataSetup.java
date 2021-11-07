@@ -29,7 +29,7 @@ public class InitialDataSetup {
             user11 = userRepository.save(BaseUser.builder().
                     userId("user11").
                     passwd("user11").
-                    name("鈴木 一郎").
+                    name("サンプル 一郎").
                     email("user11@dummy.com").
                     auth("ROLE_USER").
                     build());
@@ -39,7 +39,7 @@ public class InitialDataSetup {
             user12 = userRepository.save(BaseUser.builder().
                     userId("user12").
                     passwd("user12").
-                    name("山田 一郎").
+                    name("サンプル 二郎").
                     email("user12@dummy.com").
                     auth("ROLE_USER").
                     build());
@@ -49,7 +49,7 @@ public class InitialDataSetup {
             user13 = userRepository.save(BaseUser.builder().
                     userId("user13").
                     passwd("user13").
-                    name("佐藤 一郎").
+                    name("サンプル 三郎").
                     email("user13@dummy.com").
                     auth("ROLE_USER").
                     build());
@@ -59,7 +59,7 @@ public class InitialDataSetup {
             user14 = userRepository.save(BaseUser.builder().
                     userId("user14").
                     passwd("user14").
-                    name("高橋 一郎").
+                    name("サンプル 四郎").
                     email("user14@dummy.com").
                     auth("ROLE_USER").
                     build());
@@ -69,7 +69,7 @@ public class InitialDataSetup {
             user15 = userRepository.save(BaseUser.builder().
                     userId("user15").
                     passwd("user15").
-                    name("野村 一郎").
+                    name("サンプル 五郎").
                     email("user15@dummy.com").
                     auth("ROLE_USER").
                     build());
