@@ -21,7 +21,7 @@
 
 ## ユーザーインターフェース
 
-<div align="center">
+<div align="left">
   <img src="Document/image/login.png" height="340px" width="180px">
   <img src="Document/image/friend.png" height="340px" width="180px">
   <img src="Document/image/room.png" height="340px" width="180px">
