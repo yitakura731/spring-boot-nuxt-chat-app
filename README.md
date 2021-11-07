@@ -21,13 +21,12 @@
 
 ## ユーザーインターフェース
 
-<img src="Document/image/login.png" height="340px" width="180px">
-
-<img src="Document/image/friend.png" height="340px" width="180px">
-
-<img src="Document/image/room.png" height="340px" width="180px">
-
-<img src="Document/image/chat.png" height="340px" width="180px">
+<div align="center">
+  <img src="Document/image/login.png" height="340px" width="180px">
+  <img src="Document/image/friend.png" height="340px" width="180px">
+  <img src="Document/image/room.png" height="340px" width="180px">
+  <img src="Document/image/chat.png" height="340px" width="180px">
+</div>
 
 ## セットアップ
 
