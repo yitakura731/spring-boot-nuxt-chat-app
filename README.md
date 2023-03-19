@@ -1,7 +1,7 @@
 # SpringbootSample2
 
-- 学習用に作製したチャットアプリケーションです
-- WebSocket(Stomp)によりチャットを実現しています
+- WebSocketの学習用に作製したアプリです (NuxtJS/Spring boot/Postgres)
+- WebSocket(Stomp)を用いてチャット機能を実装を行っています
 
 ## 設計
 
@@ -9,15 +9,20 @@
 
 #### フロントエンド
 
-- Nuxt/Vue2 の SPA として、Nginx コンテナでホストしています
+- NuxtJS(Vue2) の SPA です
+- Frontend/DockerfileをビルドすることでNginxコンテナが生成されます
 
 #### バックエンド
 
-- ビジネスロジックの Rest-API を公開しています。
+- Spring boot で実装しています。
+- Rest形式のインターフェースを公開しています
+- DBアクセスは Spring Data JDBC を用いて実装しています
+- Spring Security でユーザー認証機能を実装しています
 
 #### データベース
 
-- チャットの内容を永続化します
+- チャットのやり取りを永続化します
+- データベースはPostgresを利用しています。
 
 ## ユーザーインターフェース
 
@@ -31,19 +36,16 @@
 ## セットアップ
 
 1. リポジトリをクローン
-
    ```
    git clone https://github.com/yitakura731/SpringbootSample2.git
    ```
 
-1. Docker Compose でビルドします
-
+1. Docker Compose でビルド
    ```
    docker-compose up -d --build
    ```
 
 1. ブラウザアクセス
-
    ```
    http://mypc.local:81
    ```
