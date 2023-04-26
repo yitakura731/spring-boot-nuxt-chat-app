@@ -1,4 +1,4 @@
-# SpringbootSample2
+# Nuxt × Spring boot チャットアプリ
 
 - WebSocketの学習用に作製したアプリです (NuxtJS/Spring boot/Postgres)
 - WebSocket(Stomp)を用いてチャット機能を実装を行っています
